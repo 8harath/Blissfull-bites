@@ -85,6 +85,11 @@ export default function ContactPage() {
                 <div className="card-base border border-border">
                   <h3 className="font-semibold mb-2">FSSAI License</h3>
                   <p className="text-sm text-foreground/80">FSSAI Approved Home Bakery</p>
+                  <p className="text-xs text-foreground/60 mt-2">
+                    <a href="/FSSAI_Certificate.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:text-secondary">
+                      View certificate (PDF)
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>

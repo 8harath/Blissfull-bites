@@ -165,6 +165,15 @@ export default function MenuPage() {
             <p className="text-sm text-foreground/60">
               Prices available upon request. Orders require 48 hours advance notice.
             </p>
+            <div className="mt-6">
+              <a
+                href="/BlissfulBites-Menu.pdf"
+                download
+                className="btn-secondary"
+              >
+                Download Menu (PDF)
+              </a>
+            </div>
           </div>
 
           <div className="space-y-12">
