@@ -1,8 +1,9 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -15,15 +16,34 @@ const navItems = [
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isHidden, setIsHidden] = useState(false)
+
+  useEffect(() => {
+    let lastY = window.scrollY
+    const onScroll = () => {
+      const currentY = window.scrollY
+      const isScrollingDown = currentY > lastY && currentY > 10
+      setIsHidden(isScrollingDown)
+      lastY = currentY
+    }
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
 
   return (
-    <header className="sticky top-0 z-50 bg-background shadow-sm">
+    <header className={`sticky top-0 z-50 bg-background shadow-sm transition-transform duration-300 ${isHidden ? "-translate-y-full" : "translate-y-0"}`}>
       <nav className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 h-16 md:h-20 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-serif text-2xl md:text-3xl font-bold text-foreground hover:text-secondary transition-colors"
-        >
-          Blissful Bites
+        <Link href="/" className="flex items-center gap-3 group">
+          <Image
+            src="/Images/logo.jpeg"
+            alt="Blissful Bites logo"
+            width={56}
+            height={56}
+            className="rounded-full object-cover"
+          />
+          <span className="font-serif text-2xl md:text-3xl font-bold text-foreground group-hover:text-secondary transition-colors">
+            Blissful Bites
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -40,20 +60,24 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
-        <button onClick={() => setIsOpen(!isOpen)} className="md:hidden p-2 hover:bg-card rounded-lg transition-colors">
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        {/* Mobile Menu Button (Floating) */}
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="md:hidden fixed right-4 top-4 z-[60] p-3 rounded-full border border-border bg-card/90 backdrop-blur shadow-md hover:shadow-lg transition-shadow"
+          aria-label="Toggle navigation"
+        >
+          {isOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="absolute top-16 md:top-20 left-0 right-0 bg-background border-b border-border md:hidden">
-            <div className="flex flex-col p-4 gap-4">
+          <div className="fixed inset-0 md:hidden bg-background/95 backdrop-blur-sm z-50">
+            <div className="h-full flex flex-col p-6 pt-20 gap-3">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-foreground font-medium hover:text-secondary transition-colors py-2"
+                  className="text-foreground text-lg font-medium py-3 px-2 rounded-lg hover:bg-card hover:text-secondary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}

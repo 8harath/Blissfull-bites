@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Poppins, Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
+import WhatsAppFab from "@/components/whatsapp-fab"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -30,8 +31,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/Images/logo.jpeg" />
+        <link rel="apple-touch-icon" href="/Images/logo.jpeg" />
+      </head>
       <body className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}>
         {children}
+        <WhatsAppFab />
         <Analytics />
       </body>
     </html>

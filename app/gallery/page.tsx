@@ -7,15 +7,58 @@ import Image from "next/image"
 import { X } from "lucide-react"
 
 const galleryImages = [
-  { id: 1, category: "cookies", alt: "Assorted cookies", query: "assorted homemade cookies" },
-  { id: 2, category: "cakes", alt: "Elegant chocolate cake", query: "elegant chocolate layer cake" },
-  { id: 3, category: "brownies", alt: "Fudgy brownies", query: "fudgy chocolate brownies" },
-  { id: 4, category: "macarons", alt: "Colorful macarons", query: "colorful french macarons" },
-  { id: 5, category: "pastries", alt: "Fresh pastries", query: "fresh baked pastries" },
-  { id: 6, category: "cupcakes", alt: "Decorated cupcakes", query: "decorated cupcakes" },
-  { id: 7, category: "donuts", alt: "Artisan donuts", query: "gourmet artisan donuts" },
-  { id: 8, category: "specialty", alt: "Specialty items", query: "specialty baked goods" },
-  { id: 9, category: "cookies", alt: "Cookie collection", query: "cookie collection display" },
+  // Cookies
+  { id: 1, category: "cookies", alt: "Chunky filled cookies", src: "/Images/chunky filled cookies.JPG" },
+  { id: 2, category: "cookies", alt: "Choco chip cookie", src: "/Images/chocochip cookie.JPG" },
+
+  // Cakes & Pastries
+  { id: 10, category: "cakes", alt: "Custom black forest cake", src: "/Images/custom black forest.jpg" },
+  { id: 11, category: "cakes", alt: "Custom cake", src: "/Images/custom cake.JPG" },
+  { id: 12, category: "cakes", alt: "Custom cake 7", src: "/Images/custom cake 7.jpg" },
+  { id: 13, category: "cakes", alt: "Fruit cake", src: "/Images/fruit cake.JPG" },
+  { id: 14, category: "cakes", alt: "Plum cake", src: "/Images/plum cake.jpg" },
+  { id: 15, category: "pastries", alt: "Tiramisu pastry", src: "/Images/tiramisu pastry.JPG" },
+  { id: 16, category: "pastries", alt: "White forest pastry", src: "/Images/white forest pastry.JPG" },
+  { id: 17, category: "pastries", alt: "Blueberry cream cheese pastry", src: "/Images/blueberry cream cheese pastry.JPG" },
+  { id: 18, category: "pastries", alt: "Blueberry pastry", src: "/Images/blueberry pastry.jpg" },
+  { id: 19, category: "pastries", alt: "Custom vanilla pastry", src: "/Images/custom vanilla pastry.JPEG" },
+  { id: 20, category: "pastries", alt: "Ferrero rocher pastry", src: "/Images/ferrero rocher pastry.JPG" },
+  { id: 21, category: "pastries", alt: "Butterscotch pastry", src: "/Images/butterscotch pastry.JPG" },
+  { id: 22, category: "pastries", alt: "Pineapple lychee pastry", src: "/Images/pineapple lychee pastry.JPG" },
+  { id: 23, category: "pastries", alt: "Custom lychee pastry", src: "/Images/custom lychee pastry.JPG" },
+  { id: 24, category: "pastries", alt: "Tiramisu", src: "/Images/tiramisu.JPG" },
+
+  // Brownies & Blondies
+  { id: 30, category: "brownies", alt: "Custom brownies", src: "/Images/custom brownies.JPG" },
+  { id: 31, category: "brownies", alt: "Red velvet brownie", src: "/Images/red velvet brownie.JPG" },
+  { id: 32, category: "brownies", alt: "Hazelnut brownie", src: "/Images/hazelnut brownie.jpg" },
+  { id: 33, category: "brownies", alt: "Redvelvet brownie", src: "/Images/redvelvet brownie.JPG" },
+
+  // Cupcakes
+  { id: 40, category: "cupcakes", alt: "Red velvet cupcakes", src: "/Images/red velvet cream cheese cupcakes.JPG" },
+  { id: 41, category: "cupcakes", alt: "Red velvet cupcake", src: "/Images/redvelvet cupcake.jpg" },
+  { id: 42, category: "cupcakes", alt: "Chocolate & vanilla cupcakes", src: "/Images/chocolate & vanilla cupcake.JPG" },
+  { id: 43, category: "cupcakes", alt: "Cupcake", src: "/Images/cupcake.JPG" },
+
+  // Donuts / Berliners / Bombolonis
+  { id: 50, category: "donuts", alt: "Bomboloni", src: "/Images/bomboloni.JPG" },
+  { id: 51, category: "donuts", alt: "Chocolate bombolonis", src: "/Images/chocolate bombolonis.JPG" },
+
+  // Macarons
+  // Remove HEIC to avoid blank images on some devices
+  // { id: 60, category: "macarons", alt: "Creme de citron macaron", src: "/Images/Creme de citron macaron.heic" },
+
+  // Special Treats
+  { id: 70, category: "specialty", alt: "Madeleines", src: "/Images/madeleines.jpg" },
+  { id: 71, category: "specialty", alt: "Peanut financiers", src: "/Images/peanut financiers.jpg" },
+  { id: 72, category: "specialty", alt: "Pista financiers", src: "/Images/pista financiers.jpg" },
+
+  // Cheesecakes
+  { id: 80, category: "cakes", alt: "Chocolate cheesecake", src: "/Images/chocolate cheesecake.JPG" },
+  // { id: 81, category: "cakes", alt: "Oreo cheesecake", src: "/Images/oreo cheesecake.HEIC" },
+
+  // Cloud / Other
+  // { id: 90, category: "cakes", alt: "Vanilla noir de madagascar", src: "/Images/vanilla noir de madagascar.heic" },
 ]
 
 const categories = ["All", "Cookies", "Cakes", "Brownies", "Macarons", "Pastries", "Cupcakes", "Donuts", "Specialty"]
@@ -66,7 +109,7 @@ export default function GalleryPage() {
                 className="relative h-64 rounded-lg overflow-hidden cursor-pointer group"
               >
                 <Image
-                  src={`/.jpg?height=400&width=400&query=${image.query}`}
+                  src={image.src}
                   alt={image.alt}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
@@ -93,11 +136,11 @@ export default function GalleryPage() {
               <X size={32} />
             </button>
             <Image
-              src={`/.jpg?height=600&width=600&query=${galleryImages.find((img) => img.id === selectedImage)?.query}`}
+              src={galleryImages.find((img) => img.id === selectedImage)?.src || "/Images/logo.jpeg"}
               alt="Gallery image"
               width={600}
               height={600}
-              className="w-full rounded-lg"
+              className="w-full rounded-lg object-cover"
             />
           </div>
         </div>

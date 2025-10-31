@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Mail, MapPin, Phone } from "lucide-react"
 
 export default function Footer() {
@@ -8,7 +9,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* About Column */}
           <div>
-            <h3 className="font-serif text-xl font-bold mb-4">Blissful Bites</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Image src="/Images/logo.jpeg" alt="Blissful Bites logo" width={48} height={48} className="rounded-full" />
+              <h3 className="font-serif text-xl font-bold">Blissful Bites</h3>
+            </div>
             <p className="text-sm leading-relaxed opacity-90">
               Handcrafted sweetness, baked with heart. FSSAI-approved home bakery creating artisanal baked goods for all
               occasions.
@@ -41,19 +45,13 @@ export default function Footer() {
           <div>
             <h3 className="font-serif text-lg font-bold mb-4">Get in Touch</h3>
             <div className="space-y-3 text-sm">
-              <a
-                href="https://wa.me/919876543210"
-                className="flex items-center gap-2 hover:text-primary transition-colors"
-              >
+              <a href="https://wa.me/916362395980" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Phone size={16} />
-                <span>WhatsApp Us</span>
+                <span>WhatsApp: +91 63623 95980</span>
               </a>
-              <a
-                href="mailto:contact@blissfulBites.com"
-                className="flex items-center gap-2 hover:text-primary transition-colors"
-              >
+              <a href="mailto:blissfulbites291@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <Mail size={16} />
-                <span>contact@blissfulBites.com</span>
+                <span>blissfulbites291@gmail.com</span>
               </a>
               <div className="flex items-center gap-2">
                 <MapPin size={16} />
