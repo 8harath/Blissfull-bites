@@ -4,6 +4,7 @@ import { Poppins, Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 import WhatsAppFab from "@/components/whatsapp-fab"
+import FirstLoadSplash from "@/components/first-load-splash"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/Images/logo.jpeg" />
       </head>
       <body className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}>
+        <FirstLoadSplash />
         {children}
         <WhatsAppFab />
         <Analytics />
