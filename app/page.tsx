@@ -137,22 +137,22 @@ export default function Home() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="heading-lg mb-4">Ready to Order?</h2>
           <p className="text-lg mb-8 opacity-90">
-            Orders require 48 hours advance notice. Reach out via WhatsApp or our contact form.
+            Orders require 48 hours advance notice. Reach out via call or WhatsApp.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/916362395980"
               className="bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5 inline-flex items-center justify-center gap-2"
             >
               WhatsApp Us
             </a>
-            <Link
-              href="/contact"
+            <a
+              href="tel:+916362395980"
               className="border-2 border-card text-card px-8 py-3 rounded-lg font-semibold transition-all duration-200 hover:bg-card hover:text-secondary"
             >
-              Send an Inquiry
-            </Link>
+              Call Us
+            </a>
           </div>
         </div>
       </section>

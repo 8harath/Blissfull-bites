@@ -11,7 +11,7 @@ const faqItems = [
     items: [
       {
         q: "How do I place an order?",
-        a: "Orders can be placed via WhatsApp or through our contact form. Share your requirements, occasion, and preferred pickup date. We'll get back to you with details and confirmation.",
+        a: "Orders can be placed via call or WhatsApp. Share your requirements, occasion, and preferred pickup date. We'll get back to you with details and confirmation.",
       },
       {
         q: "What is the minimum advance notice for orders?",
@@ -149,13 +149,13 @@ export default function FAQPage() {
 
           <div className="mt-16 card-base border border-border bg-card text-center">
             <h3 className="heading-md mb-3">Still have questions?</h3>
-            <p className="text-body mb-6">Feel free to reach out to us via WhatsApp or our contact form.</p>
+            <p className="text-body mb-6">Feel free to reach out to us via call or WhatsApp.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://wa.me/919876543210" className="btn-primary">
+              <a href="https://wa.me/916362395980" className="btn-primary">
                 WhatsApp Us
               </a>
-              <a href="/contact" className="btn-secondary">
-                Contact Form
+              <a href="tel:+916362395980" className="btn-secondary">
+                Call Us
               </a>
             </div>
           </div>
