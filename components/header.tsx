@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -19,11 +20,17 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background shadow-sm">
       <nav className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 h-16 md:h-20 flex items-center justify-between">
-        <Link
-          href="/"
-          className="font-serif text-2xl md:text-3xl font-bold text-foreground hover:text-secondary transition-colors"
-        >
-          Blissful Bites
+        <Link href="/" className="flex items-center gap-3 group">
+          <Image
+            src="/Images/logo.jpeg"
+            alt="Blissful Bites logo"
+            width={40}
+            height={40}
+            className="rounded-full object-cover"
+          />
+          <span className="font-serif text-2xl md:text-3xl font-bold text-foreground group-hover:text-secondary transition-colors">
+            Blissful Bites
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
