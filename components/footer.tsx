@@ -10,7 +10,7 @@ export default function Footer() {
           {/* About Column */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Image src="/Images/logo.jpeg" alt="Blissful Bites logo" width={36} height={36} className="rounded-full" />
+              <Image src="/Images/logo.jpeg" alt="Blissful Bites logo" width={48} height={48} className="rounded-full" />
               <h3 className="font-serif text-xl font-bold">Blissful Bites</h3>
             </div>
             <p className="text-sm leading-relaxed opacity-90">

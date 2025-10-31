@@ -24,8 +24,8 @@ export default function Header() {
           <Image
             src="/Images/logo.jpeg"
             alt="Blissful Bites logo"
-            width={40}
-            height={40}
+            width={56}
+            height={56}
             className="rounded-full object-cover"
           />
           <span className="font-serif text-2xl md:text-3xl font-bold text-foreground group-hover:text-secondary transition-colors">
@@ -54,13 +54,13 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="absolute top-16 md:top-20 left-0 right-0 bg-background border-b border-border md:hidden">
-            <div className="flex flex-col p-4 gap-4">
+          <div className="fixed inset-0 md:hidden bg-background/95 backdrop-blur-sm">
+            <div className="h-full flex flex-col p-6 pt-20 gap-3">
               {navItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="text-foreground font-medium hover:text-secondary transition-colors py-2"
+                  className="text-foreground text-lg font-medium py-3 px-2 rounded-lg hover:bg-card hover:text-secondary transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}

@@ -10,7 +10,6 @@ const galleryImages = [
   // Cookies
   { id: 1, category: "cookies", alt: "Chunky filled cookies", src: "/Images/chunky filled cookies.JPG" },
   { id: 2, category: "cookies", alt: "Choco chip cookie", src: "/Images/chocochip cookie.JPG" },
-  { id: 3, category: "cookies", alt: "Cookies box", src: "/Images/cookies.jpg" },
 
   // Cakes & Pastries
   { id: 10, category: "cakes", alt: "Custom black forest cake", src: "/Images/custom black forest.jpg" },
@@ -46,7 +45,8 @@ const galleryImages = [
   { id: 51, category: "donuts", alt: "Chocolate bombolonis", src: "/Images/chocolate bombolonis.JPG" },
 
   // Macarons
-  { id: 60, category: "macarons", alt: "Creme de citron macaron", src: "/Images/Creme de citron macaron.heic" },
+  // Remove HEIC to avoid blank images on some devices
+  // { id: 60, category: "macarons", alt: "Creme de citron macaron", src: "/Images/Creme de citron macaron.heic" },
 
   // Special Treats
   { id: 70, category: "specialty", alt: "Madeleines", src: "/Images/madeleines.jpg" },
@@ -55,10 +55,10 @@ const galleryImages = [
 
   // Cheesecakes
   { id: 80, category: "cakes", alt: "Chocolate cheesecake", src: "/Images/chocolate cheesecake.JPG" },
-  { id: 81, category: "cakes", alt: "Oreo cheesecake", src: "/Images/oreo cheesecake.HEIC" },
+  // { id: 81, category: "cakes", alt: "Oreo cheesecake", src: "/Images/oreo cheesecake.HEIC" },
 
   // Cloud / Other
-  { id: 90, category: "cakes", alt: "Vanilla noir de madagascar", src: "/Images/vanilla noir de madagascar.heic" },
+  // { id: 90, category: "cakes", alt: "Vanilla noir de madagascar", src: "/Images/vanilla noir de madagascar.heic" },
 ]
 
 const categories = ["All", "Cookies", "Cakes", "Brownies", "Macarons", "Pastries", "Cupcakes", "Donuts", "Specialty"]

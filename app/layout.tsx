@@ -30,6 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/Images/logo.jpeg" />
+        <link rel="apple-touch-icon" href="/Images/logo.jpeg" />
+      </head>
       <body className={`${poppins.variable} ${playfair.variable} font-sans antialiased`}>
         {children}
         <Analytics />
