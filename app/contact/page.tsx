@@ -110,14 +110,6 @@ export default function ContactPage() {
       </section>
 
       <Footer />
-      {/* Floating WhatsApp Button for mobile users */}
-      <a
-        href="https://wa.me/916362395980?text=Hi%20Blissful%20Bites%2C%20I'd%20like%20to%20place%20an%20order."
-        className="fixed bottom-5 right-5 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-500 text-white shadow-lg hover:bg-green-600 transition-colors"
-        aria-label="Chat on WhatsApp"
-      >
-        <span className="text-2xl">💬</span>
-      </a>
     </>
   )
 }
