@@ -5,8 +5,8 @@ import { Mail, MapPin, Phone } from "lucide-react"
 export default function Footer() {
   return (
     <footer className="bg-foreground text-card">
-      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 py-10 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About Column */}
           <div>
             <div className="flex items-center gap-3 mb-4">
@@ -61,7 +61,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-card/20 pt-8 text-center text-xs opacity-75">
+        <div className="border-t border-card/20 pt-6 text-center text-xs opacity-75">
           <p>© 2025 Blissful Bites. All rights reserved.</p>
           <p className="mt-2"></p>
         </div>

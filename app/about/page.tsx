@@ -1,15 +1,15 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import { Heart, Users, Sparkles } from "lucide-react"
+import { Heart, Users, Sparkles, Cake, Gem, Building2, PartyPopper, Home, Star } from "lucide-react"
 import Image from "next/image"
 
 const occasions = [
-  { icon: "🎂", label: "Birthdays" },
-  { icon: "💍", label: "Weddings" },
-  { icon: "🏢", label: "Corporate Events" },
-  { icon: "🎉", label: "Festivals" },
-  { icon: "🏠", label: "House Parties" },
-  { icon: "✨", label: "Just Because" },
+  { icon: Cake, label: "Birthdays" },
+  { icon: Gem, label: "Weddings" },
+  { icon: Building2, label: "Corporate Events" },
+  { icon: PartyPopper, label: "Festivals" },
+  { icon: Home, label: "House Parties" },
+  { icon: Star, label: "Just Because" },
 ]
 
 export default function AboutPage() {
@@ -103,7 +103,9 @@ export default function AboutPage() {
                   key={idx}
                   className="card-base border border-accent text-center hover:-translate-y-2 transition-transform duration-300"
                 >
-                  <div className="text-4xl mb-3">{occasion.icon}</div>
+                  <div className="flex justify-center mb-3 text-secondary">
+                    <occasion.icon className="w-10 h-10" />
+                  </div>
                   <p className="font-medium text-foreground">{occasion.label}</p>
                 </div>
               ))}

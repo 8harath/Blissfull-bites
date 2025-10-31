@@ -31,8 +31,9 @@ export default function Header() {
   }, [])
 
   return (
-    <header className={`sticky top-0 z-50 bg-background shadow-sm transition-transform duration-300 ${isHidden ? "-translate-y-full" : "translate-y-0"}`}>
-      <nav className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 h-16 md:h-20 flex items-center justify-between">
+    <>
+      <header className={`sticky top-0 z-50 bg-background shadow-sm transition-transform duration-300 ${isHidden ? "-translate-y-full" : "translate-y-0"}`}>
+        <nav className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 h-16 md:h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
           <Image
             src="/Images/logo.jpeg"
@@ -60,33 +61,52 @@ export default function Header() {
           ))}
         </div>
 
-        {/* Mobile Menu Button (Floating) */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden fixed right-4 top-4 z-[60] p-3 rounded-full border border-border bg-card/90 backdrop-blur shadow-md hover:shadow-lg transition-shadow"
-          aria-label="Toggle navigation"
-        >
-          {isOpen ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        {/* spacer for desktop right side */}
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="fixed inset-0 md:hidden bg-background/95 backdrop-blur-sm z-50">
-            <div className="h-full flex flex-col p-6 pt-20 gap-3">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-foreground text-lg font-medium py-3 px-2 rounded-lg hover:bg-card hover:text-secondary transition-colors"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
       </nav>
-    </header>
+      </header>
+
+      {/* Mobile: Centered logo in header by auto margins */}
+      <style jsx global>{`
+        @media (max-width: 767px) {
+          header nav > a:first-of-type { justify-content: center; margin-left: auto; margin-right: auto; }
+        }
+      `}</style>
+
+      {/* Floating hamburger outside transforming header */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="md:hidden fixed right-4 top-3 z-[70] h-10 w-10 flex items-center justify-center rounded-full border border-border bg-card/80 backdrop-blur shadow-md hover:shadow-lg transition-all"
+        aria-label="Toggle navigation"
+      >
+        {isOpen ? <X size={22} /> : <Menu size={22} />}
+      </button>
+
+      {/* Mobile Navigation Overlay with slide-in panel */}
+      <div className={`md:hidden fixed inset-0 z-[60] ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
+        aria-hidden={!isOpen}
+      >
+        <div
+          onClick={() => setIsOpen(false)}
+          className={`absolute inset-0 bg-background/70 dark:bg-background/60 backdrop-blur-sm transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`}
+        />
+        <div
+          className={`absolute right-0 top-0 h-full w-4/5 max-w-sm bg-card/80 dark:bg-card/70 backdrop-blur-md border-l border-border/50 dark:border-border/40 shadow-xl p-6 pt-20 flex flex-col gap-3 transition-transform duration-300 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        >
+          <div className="mb-3 text-foreground/70 text-sm">Menu</div>
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-foreground text-lg font-medium py-3 px-2 rounded-lg hover:bg-muted/20 hover:text-secondary transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </>
   )
 }
