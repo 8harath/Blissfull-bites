@@ -28,7 +28,7 @@ export default function AboutPage() {
               <div className="space-y-4 text-body">
                 <p>
                   Blissful Bytes began with a simple belief: that the best baked goods are made with heart, not haste.
-                  Founded by Poorvika, our women-led home bakery in Bangalore is dedicated to creating handcrafted baked
+                  Founded by Savitha & Poorvika, our women-led home bakery in Bangalore is dedicated to creating handcrafted baked
                   goods that turn your special moments into sweet memories.
                 </p>
                 <p>
@@ -44,7 +44,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative h-96 rounded-lg overflow-hidden shadow-lg">
-              <Image src="/woman-baker-in-kitchen.jpg" alt="Poorvika in the bakery" fill className="object-cover" />
+              <Image src="/woman-baker-in-kitchen.jpg" alt="Savitha & Poorvika in the bakery" fill className="object-cover" />
             </div>
           </div>
 

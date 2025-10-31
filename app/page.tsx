@@ -68,7 +68,7 @@ export default function Home() {
             <div className="space-y-4 text-body">
               <p>
                 Welcome to Blissful Bytes, where every bite tells a story of love, care, and artisanal craftsmanship.
-                Founded by Poorvika, we're a women-led, FSSAI-certified home bakery based in Bangalore, dedicated to
+                Founded by Savitha & Poorvika, we're a women-led, FSSAI-certified home bakery based in Bangalore, dedicated to
                 creating handcrafted baked goods that turn your special moments into sweet memories.
               </p>
               <p>
