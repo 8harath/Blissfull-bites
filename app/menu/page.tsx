@@ -1,6 +1,7 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Link from "next/link"
+import Image from "next/image"
 
 const menuCategories = [
   {
@@ -91,6 +92,56 @@ const menuCategories = [
 ]
 
 export default function MenuPage() {
+  const itemImageMap: Record<string, string> = {
+    // Cookies
+    "Chocolate Chip": "/Images/chocochip cookie.JPG",
+    "Pistachio": "/Images/pista financiers.jpg", // closest relevant image
+    "Hazelnut Chocolate": "/Images/hazelnut brownie.jpg",
+
+    // Chunky Centre Filled Cookies
+    "Nutella Filled": "/Images/chunky filled cookies.JPG",
+    "Caramel Filled": "/Images/chunky filled cookies.JPG",
+    "Chocolate Fudge": "/Images/chunky filled cookies.JPG",
+    "Peanut Butter": "/Images/chunky filled cookies.JPG",
+
+    // Cakes
+    "Chocolate Cake": "/Images/chocolate truffle.JPG",
+    "Vanilla Cake": "/Images/custom vanilla pastry.JPEG",
+    "Red Velvet": "/Images/redvelvet .JPG",
+    "Black Forest": "/Images/custom black forest.jpg",
+    "Fruit Petit": "/Images/fruit cake.JPG",
+
+    // Tres Leches
+    "Classic Tres Leches": "/Images/mango tresleches.JPEG",
+    "Strawberry Tres Leches": "/Images/mango tres leches.JPEG",
+
+    // Cupcakes
+    "Red Velvet": "/Images/redvelvet cupcake.jpg",
+    "Vanilla": "/Images/cupcake.JPG",
+    "Chocolate": "/Images/chocolate & vanilla cupcake.JPG",
+
+    // Macarons
+    "Pistachio": "/Images/Creme de citron macaron.heic",
+
+    // Donuts & Berliners
+    "Berliner": "/Images/bomboloni.JPG",
+    "Jam Filled": "/Images/chocolate bombolonis.JPG",
+
+    // Financiers (Special Range)
+    "Almond Financier": "/Images/peanut financiers.jpg",
+    "Pistachio Financier": "/Images/pista financiers.jpg",
+
+    // Madeleines
+    "Classic Madeleine": "/Images/madeleines.jpg",
+
+    // Brownies
+    "Classic Brownie": "/Images/custom brownies.JPG",
+    "Walnut Brownie": "/Images/custom brownies.JPG",
+    "Red Velvet Brownie": "/Images/red velvet brownie.JPG",
+
+    // Iyengar Bakery Tea Cakes
+    "Traditional Tea Cake": "/Images/tea cake.JPG",
+  }
   return (
     <>
       <Header />
@@ -115,7 +166,17 @@ export default function MenuPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                   {category.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className="card-base border border-accent">
+                    <div key={itemIdx} className="card-base border border-accent overflow-hidden">
+                      {itemImageMap[item] ? (
+                        <div className="relative h-36 -mx-6 -mt-6 mb-3">
+                          <Image
+                            src={itemImageMap[item]}
+                            alt={item}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                      ) : null}
                       <p className="font-medium text-foreground">{item}</p>
                       <p className="text-xs text-foreground/60 mt-1">Available on request</p>
                     </div>
