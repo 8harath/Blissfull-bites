@@ -44,7 +44,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-8 text-center">
-          <h1 className="heading-xl mb-4 text-balance">Blissful Bytes</h1>
+          <h1 className="heading-xl mb-4 text-balance">Blissful Bites</h1>
           <p className="text-xl md:text-2xl text-secondary font-medium mb-2">Handcrafted sweetness, baked with heart</p>
           <p className="text-base md:text-lg text-foreground/80 mb-8">FSSAI-Approved Home Bakery | Bangalore</p>
 
@@ -64,15 +64,15 @@ export default function Home() {
       <section className="section-padding bg-background">
         <div className="max-w-3xl mx-auto">
           <div className="card-base border border-border">
-            <h2 className="heading-lg mb-6 text-center">Welcome to Blissful Bytes</h2>
+            <h2 className="heading-lg mb-6 text-center">Welcome to Blissful Bites</h2>
             <div className="space-y-4 text-body">
               <p>
-                Welcome to Blissful Bytes, where every bite tells a story of love, care, and artisanal craftsmanship.
+                Welcome to Blissful Bites, where every bite tells a story of love, care, and artisanal craftsmanship.
                 Founded by Savitha & Poorvika, we're a women-led, FSSAI-certified home bakery based in Bangalore, dedicated to
                 creating handcrafted baked goods that turn your special moments into sweet memories.
               </p>
               <p>
-                Blissful Bytes began with a simple belief: that the best baked goods are made with heart, not haste.
+                Blissful Bites began with a simple belief: that the best baked goods are made with heart, not haste.
                 Every cookie, cake, and pastry that leaves our kitchen is a labor of love, crafted fresh to order using
                 premium ingredients and time-honored techniques.
               </p>
@@ -118,7 +118,7 @@ export default function Home() {
       {/* Why Choose Us */}
       <section className="section-padding bg-background">
         <div className="max-w-7xl mx-auto">
-          <h2 className="heading-lg text-center mb-12">Why Blissful Bytes?</h2>
+          <h2 className="heading-lg text-center mb-12">Why Blissful Bites?</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {whyChoose.map((item, idx) => (

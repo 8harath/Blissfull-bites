@@ -17,7 +17,7 @@ const playfair = Playfair_Display({
 })
 
 export const metadata: Metadata = {
-  title: "Blissful Bytes | Handcrafted Baked Goods in Bangalore",
+  title: "Blissful Bites | Handcrafted Baked Goods in Bangalore",
   description:
     "FSSAI-approved home bakery offering artisanal baked goods for all occasions. Handcrafted sweetness, baked with heart.",
   generator: "v0.app",

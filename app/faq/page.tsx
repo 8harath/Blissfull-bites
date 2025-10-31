@@ -69,7 +69,7 @@ const faqItems = [
     category: "Food Safety & Certification",
     items: [
       {
-        q: "Is Blissful Bytes licensed?",
+        q: "Is Blissful Bites licensed?",
         a: "Yes, we are an FSSAI-approved home bakery, adhering to all food safety and hygiene standards.",
       },
       {
@@ -108,7 +108,7 @@ export default function FAQPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="heading-lg mb-4">Frequently Asked Questions</h1>
-            <p className="text-lg text-foreground/80">Everything you need to know about ordering from Blissful Bytes</p>
+            <p className="text-lg text-foreground/80">Everything you need to know about ordering from Blissful Bites</p>
           </div>
 
           <div className="space-y-8">

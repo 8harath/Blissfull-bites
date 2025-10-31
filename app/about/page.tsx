@@ -19,7 +19,7 @@ export default function AboutPage() {
 
       <section className="section-padding bg-background">
         <div className="max-w-7xl mx-auto">
-          <h1 className="heading-lg text-center mb-12">About Blissful Bytes</h1>
+          <h1 className="heading-lg text-center mb-12">About Blissful Bites</h1>
 
           {/* Story Section */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16 items-center">
@@ -27,7 +27,7 @@ export default function AboutPage() {
               <h2 className="heading-md mb-6 text-secondary">Our Story</h2>
               <div className="space-y-4 text-body">
                 <p>
-                  Blissful Bytes began with a simple belief: that the best baked goods are made with heart, not haste.
+                  Blissful Bites began with a simple belief: that the best baked goods are made with heart, not haste.
                   Founded by Savitha & Poorvika, our women-led home bakery in Bangalore is dedicated to creating handcrafted baked
                   goods that turn your special moments into sweet memories.
                 </p>
@@ -86,7 +86,7 @@ export default function AboutPage() {
           <div className="card-base border border-border bg-card text-center mb-16">
             <h3 className="heading-md mb-3 text-secondary">Licensed & Certified</h3>
             <p className="text-body mb-4">
-              Blissful Bytes is a certified home bakery, adhering to all food safety and hygiene standards set by FSSAI.
+              Blissful Bites is a certified home bakery, adhering to all food safety and hygiene standards set by FSSAI.
               Your trust and safety are our top priorities.
             </p>
             <div className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold">

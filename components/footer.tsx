@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* About Column */}
           <div>
-            <h3 className="font-serif text-xl font-bold mb-4">Blissful Bytes</h3>
+            <h3 className="font-serif text-xl font-bold mb-4">Blissful Bites</h3>
             <p className="text-sm leading-relaxed opacity-90">
               Handcrafted sweetness, baked with heart. FSSAI-approved home bakery creating artisanal baked goods for all
               occasions.
@@ -49,11 +49,11 @@ export default function Footer() {
                 <span>WhatsApp Us</span>
               </a>
               <a
-                href="mailto:contact@blissfulbytes.com"
+                href="mailto:contact@blissfulBites.com"
                 className="flex items-center gap-2 hover:text-primary transition-colors"
               >
                 <Mail size={16} />
-                <span>contact@blissfulbytes.com</span>
+                <span>contact@blissfulBites.com</span>
               </a>
               <div className="flex items-center gap-2">
                 <MapPin size={16} />
@@ -64,7 +64,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-card/20 pt-8 text-center text-xs opacity-75">
-          <p>© 2025 Blissful Bytes. All rights reserved.</p>
+          <p>© 2025 Blissful Bites. All rights reserved.</p>
           <p className="mt-2"></p>
         </div>
       </div>

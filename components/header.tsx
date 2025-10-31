@@ -23,7 +23,7 @@ export default function Header() {
           href="/"
           className="font-serif text-2xl md:text-3xl font-bold text-foreground hover:text-secondary transition-colors"
         >
-          Blissful Bytes
+          Blissful Bites
         </Link>
 
         {/* Desktop Navigation */}
