@@ -138,4 +138,67 @@
   .text-body {
     @apply text-base md:text-lg leading-relaxed text-foreground;
   }
+
+  /* Splash animation utilities */
+  .animate-bb-steam {
+    animation: bb-steam 1.6s ease-in-out infinite;
+  }
+  .animate-bb-crumb {
+    animation: bb-crumb 1.2s ease-in-out infinite alternate;
+  }
+  .animate-bb-drip {
+    animation: bb-drip 1.8s ease-in-out 1;
+    transform-origin: 60px 68px;
+  }
+  .animate-bb-pulse {
+    animation: bb-pulse 1.8s ease-in-out infinite;
+  }
+}
+
+@keyframes bb-steam {
+  0% {
+    opacity: 0;
+    transform: translateY(6px) scale(0.95);
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px) scale(1.05);
+  }
+}
+
+@keyframes bb-crumb {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-6px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes bb-drip {
+  0% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bb-pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
 }
