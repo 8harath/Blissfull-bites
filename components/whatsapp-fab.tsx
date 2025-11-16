@@ -2,6 +2,20 @@
 
 import Link from "next/link"
 
+/**
+ * WhatsApp Floating Action Button (FAB)
+ *
+ * A fixed-position button that allows users to quickly start a WhatsApp conversation
+ * with the business. The button appears in the bottom-right corner of all pages.
+ *
+ * @component
+ * @example
+ * ```tsx
+ * <WhatsAppFab />
+ * ```
+ *
+ * @returns {JSX.Element} A floating WhatsApp contact button
+ */
 export default function WhatsAppFab() {
   return (
     <Link

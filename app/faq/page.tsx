@@ -125,7 +125,10 @@ export default function FAQPage() {
                       <div key={itemId} className="card-base border border-border">
                         <button
                           onClick={() => toggleItem(itemId)}
-                          className="w-full flex items-start justify-between gap-4 text-left"
+                          className="w-full flex items-start justify-between gap-4 text-left focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                          aria-expanded={isOpen}
+                          aria-controls={`faq-answer-${itemId}`}
+                          id={`faq-question-${itemId}`}
                         >
                           <span className="font-semibold text-foreground flex-1">{item.q}</span>
                           <ChevronDown
@@ -133,11 +136,19 @@ export default function FAQPage() {
                             className={`flex-shrink-0 text-secondary transition-transform duration-300 ${
                               isOpen ? "rotate-180" : ""
                             }`}
+                            aria-hidden="true"
                           />
                         </button>
 
                         {isOpen && (
-                          <div className="mt-4 pt-4 border-t border-border text-body text-foreground/80">{item.a}</div>
+                          <div
+                            id={`faq-answer-${itemId}`}
+                            role="region"
+                            aria-labelledby={`faq-question-${itemId}`}
+                            className="mt-4 pt-4 border-t border-border text-body text-foreground/80"
+                          >
+                            {item.a}
+                          </div>
                         )}
                       </div>
                     )

@@ -1,7 +1,35 @@
+import type { Metadata } from "next"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Link from "next/link"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: 'Menu - Handcrafted Baked Goods',
+  description: 'Browse our menu of handcrafted cakes, cupcakes, cookies, brownies, macarons, and more. Fresh baked goods made to order in Bangalore. 48-hour advance notice required.',
+  keywords: [
+    'bakery menu bangalore',
+    'custom cakes menu',
+    'cupcakes bangalore',
+    'cookies menu',
+    'brownies menu',
+    'macarons bangalore',
+    'tres leches cake',
+    'cheesecake bangalore',
+    'bakery price list',
+  ],
+  openGraph: {
+    title: 'Blissful Bites Menu - Handcrafted Baked Goods',
+    description: 'Explore our menu of fresh, handcrafted cakes, cookies, brownies, and more',
+    images: ['/Images/logo.jpeg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blissful Bites Menu',
+    description: 'Handcrafted baked goods menu',
+    images: ['/Images/logo.jpeg'],
+  },
+}
 
 const menuCategories = [
   {
