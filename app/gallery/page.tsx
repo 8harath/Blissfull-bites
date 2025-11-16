@@ -103,23 +103,30 @@ export default function GalleryPage() {
           {/* Gallery Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {filteredImages.map((image) => (
-              <div
+              <button
                 key={image.id}
                 onClick={() => setSelectedImage(image.id)}
-                className="relative h-64 rounded-lg overflow-hidden cursor-pointer group"
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault()
+                    setSelectedImage(image.id)
+                  }
+                }}
+                className="relative h-64 rounded-lg overflow-hidden cursor-pointer group focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                aria-label={`View ${image.alt} in lightbox`}
               >
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                  <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-medium">
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 group-focus:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                  <span className="text-white opacity-0 group-hover:opacity-100 group-focus:opacity-100 transition-opacity duration-300 font-medium">
                     View
                   </span>
                 </div>
-              </div>
+              </button>
             ))}
           </div>
         </div>
@@ -127,17 +134,29 @@ export default function GalleryPage() {
 
       {/* Lightbox */}
       {selectedImage && (
-        <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4">
-          <div className="relative max-w-2xl w-full">
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Image lightbox"
+          onClick={() => setSelectedImage(null)}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape') {
+              setSelectedImage(null)
+            }
+          }}
+        >
+          <div className="relative max-w-2xl w-full" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute -top-10 right-0 text-white hover:text-primary transition-colors"
+              className="absolute -top-10 right-0 text-white hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-white rounded"
+              aria-label="Close lightbox"
             >
               <X size={32} />
             </button>
             <Image
               src={galleryImages.find((img) => img.id === selectedImage)?.src || "/Images/logo.jpeg"}
-              alt="Gallery image"
+              alt={galleryImages.find((img) => img.id === selectedImage)?.alt || "Gallery image"}
               width={600}
               height={600}
               className="w-full rounded-lg object-cover"

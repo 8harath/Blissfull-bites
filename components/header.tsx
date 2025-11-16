@@ -5,7 +5,15 @@ import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import Image from "next/image"
 
-const navItems = [
+/**
+ * Navigation item interface
+ */
+interface NavItem {
+  label: string
+  href: string
+}
+
+const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Menu", href: "/menu" },
   { label: "About", href: "/about" },
@@ -14,6 +22,24 @@ const navItems = [
   { label: "FAQ", href: "/faq" },
 ]
 
+/**
+ * Header Component
+ *
+ * Responsive navigation header with mobile menu and auto-hide on scroll.
+ * Features:
+ * - Desktop horizontal navigation
+ * - Mobile hamburger menu
+ * - Auto-hide on scroll down, show on scroll up
+ * - Logo with brand image
+ *
+ * @component
+ * @example
+ * ```tsx
+ * <Header />
+ * ```
+ *
+ * @returns {JSX.Element} The navigation header
+ */
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [isHidden, setIsHidden] = useState(false)

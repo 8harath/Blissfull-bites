@@ -1,7 +1,32 @@
+import type { Metadata } from "next"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Heart, Users, Sparkles, Cake, Gem, Building2, PartyPopper, Home, Star } from "lucide-react"
 import Image from "next/image"
+
+export const metadata: Metadata = {
+  title: 'About Us - Our Story',
+  description: 'Learn about Blissful Bites, a women-led FSSAI-approved home bakery in Bangalore. Founded by Savitha & Poorvika, we create handcrafted baked goods with love and premium ingredients.',
+  keywords: [
+    'about blissful bites',
+    'women-led bakery bangalore',
+    'FSSAI approved bakery',
+    'home bakery story',
+    'savitha poorvika bakery',
+    'bangalore home bakery',
+  ],
+  openGraph: {
+    title: 'About Blissful Bites - Our Story',
+    description: 'Women-led FSSAI-approved home bakery crafting handmade baked goods in Bangalore',
+    images: ['/Images/logo.jpeg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Blissful Bites',
+    description: 'Women-led FSSAI-approved home bakery in Bangalore',
+    images: ['/Images/logo.jpeg'],
+  },
+}
 
 const occasions = [
   { icon: Cake, label: "Birthdays" },
