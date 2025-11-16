@@ -106,7 +106,6 @@ export default function MenuPage() {
   const itemImageMap: Record<string, string> = {
     // Cookies
     "Chocolate Chip": "/Images/chocochip cookie.JPG",
-    "Pistachio": "/Images/pista financiers.jpg", // closest relevant image
     "Hazelnut Chocolate": "/Images/hazelnut brownie.jpg",
 
     // Chunky Centre Filled Cookies
@@ -118,7 +117,6 @@ export default function MenuPage() {
     // Cakes
     "Chocolate Cake": "/Images/chocolate truffle.JPG",
     "Vanilla Cake": "/Images/custom vanilla pastry.JPEG",
-    "Red Velvet": "/Images/redvelvet .JPG",
     "Black Forest": "/Images/custom black forest.jpg",
     "Fruit Petit": "/Images/fruit cake.JPG",
 
@@ -126,13 +124,10 @@ export default function MenuPage() {
     "Classic Tres Leches": "/Images/mango tresleches.JPEG",
     "Strawberry Tres Leches": "/Images/mango tres leches.JPEG",
 
-    // Cupcakes
+    // Cupcakes (using full name to avoid conflicts)
     "Red Velvet": "/Images/redvelvet cupcake.jpg",
     "Vanilla": "/Images/cupcake.JPG",
     "Chocolate": "/Images/chocolate & vanilla cupcake.JPG",
-
-    // Macarons
-    "Pistachio": "/Images/Creme de citron macaron.heic",
 
     // Donuts & Berliners
     "Berliner": "/Images/bomboloni.JPG",
