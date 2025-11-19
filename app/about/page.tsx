@@ -5,26 +5,34 @@ import { Heart, Users, Sparkles, Cake, Gem, Building2, PartyPopper, Home, Star }
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: 'About Us - Our Story',
-  description: 'Learn about Blissful Bites, a women-led FSSAI-approved home bakery in Bangalore. Founded by Savitha & Poorvika, we create handcrafted baked goods with love and premium ingredients.',
+  title: 'About Blissful Bites | Women-Led Home Bakery Bangalore | Our Story',
+  description: 'Discover Blissful Bites - Bangalore\'s premier women-led FSSAI-approved home bakery. Founded by Savitha & Poorvika, we create handcrafted baked goods with love, premium ingredients, and artisanal techniques for all occasions.',
   keywords: [
-    'about blissful bites',
-    'women-led bakery bangalore',
+    'about Blissful Bites',
+    'Blissful Bites Bangalore',
+    'women-led bakery Bangalore',
     'FSSAI approved bakery',
     'home bakery story',
-    'savitha poorvika bakery',
-    'bangalore home bakery',
+    'Savitha Poorvika bakery',
+    'Bangalore home bakery',
+    'artisanal bakery story',
+    'women entrepreneurs bakery',
+    'Blissfull Bites about',
   ],
   openGraph: {
-    title: 'About Blissful Bites - Our Story',
-    description: 'Women-led FSSAI-approved home bakery crafting handmade baked goods in Bangalore',
+    title: 'About Blissful Bites - Women-Led Home Bakery in Bangalore',
+    description: 'Meet Savitha & Poorvika - founders of Bangalore\'s FSSAI-approved home bakery crafting handmade baked goods',
     images: ['/Images/logo.jpeg'],
+    url: '/about',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Blissful Bites',
+    title: 'About Blissful Bites Bangalore',
     description: 'Women-led FSSAI-approved home bakery in Bangalore',
     images: ['/Images/logo.jpeg'],
+  },
+  alternates: {
+    canonical: '/about',
   },
 }
 

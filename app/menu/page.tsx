@@ -5,29 +5,36 @@ import Link from "next/link"
 import Image from "next/image"
 
 export const metadata: Metadata = {
-  title: 'Menu - Handcrafted Baked Goods',
-  description: 'Browse our menu of handcrafted cakes, cupcakes, cookies, brownies, macarons, and more. Fresh baked goods made to order in Bangalore. 48-hour advance notice required.',
+  title: 'Menu - Blissful Bites Bangalore | Cakes, Cupcakes, Cookies, Brownies & More',
+  description: 'Browse Blissful Bites menu - handcrafted cakes, cupcakes, cookies, brownies, macarons, tres leches & more. Fresh baked goods made to order in Bangalore. FSSAI-approved. Custom & eggless options available. 48-hour advance notice.',
   keywords: [
-    'bakery menu bangalore',
-    'custom cakes menu',
-    'cupcakes bangalore',
-    'cookies menu',
+    'Blissful Bites menu',
+    'bakery menu Bangalore',
+    'custom cakes Bangalore menu',
+    'cupcakes Bangalore price',
+    'cookies menu Bangalore',
     'brownies menu',
-    'macarons bangalore',
-    'tres leches cake',
-    'cheesecake bangalore',
+    'macarons Bangalore',
+    'tres leches cake Bangalore',
+    'cheesecake Bangalore',
     'bakery price list',
+    'eggless cakes menu',
+    'Blissfull Bites menu',
   ],
   openGraph: {
-    title: 'Blissful Bites Menu - Handcrafted Baked Goods',
-    description: 'Explore our menu of fresh, handcrafted cakes, cookies, brownies, and more',
+    title: 'Blissful Bites Menu - Handcrafted Baked Goods Bangalore',
+    description: 'Explore our menu of fresh, handcrafted cakes, cookies, brownies, macarons & more',
     images: ['/Images/logo.jpeg'],
+    url: '/menu',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blissful Bites Menu',
-    description: 'Handcrafted baked goods menu',
+    title: 'Blissful Bites Menu Bangalore',
+    description: 'Handcrafted baked goods menu - cakes, cupcakes, cookies & more',
     images: ['/Images/logo.jpeg'],
+  },
+  alternates: {
+    canonical: '/menu',
   },
 }
 

@@ -1,28 +1,36 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Gallery - View Our Creations',
-  description: 'Browse our gallery of handcrafted baked goods including cakes, cupcakes, cookies, brownies, macarons, and more. See what we can create for your special occasion.',
+  title: 'Gallery - Blissful Bites Bangalore | Photos of Our Handcrafted Cakes & Baked Goods',
+  description: 'Browse Blissful Bites gallery - stunning photos of handcrafted cakes, cupcakes, cookies, brownies, macarons & more. See our FSSAI-approved bakery creations for birthdays, weddings & special occasions in Bangalore. Custom designs available.',
   keywords: [
-    'bakery gallery bangalore',
-    'cake photos',
+    'Blissful Bites gallery',
+    'bakery gallery Bangalore',
+    'cake photos Bangalore',
     'cupcake gallery',
     'cookie photos',
     'brownie photos',
     'macaron gallery',
     'custom cake designs',
     'bakery portfolio',
+    'wedding cake photos',
+    'birthday cake gallery',
+    'Blissfull Bites photos',
   ],
   openGraph: {
-    title: 'Blissful Bites Gallery - Our Handcrafted Creations',
-    description: 'Browse our gallery of beautiful handcrafted baked goods',
+    title: 'Blissful Bites Gallery - Handcrafted Baked Goods Bangalore',
+    description: 'Browse our gallery of beautiful handcrafted baked goods - cakes, cupcakes, cookies & more',
     images: ['/Images/logo.jpeg'],
+    url: '/gallery',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Blissful Bites Gallery',
+    title: 'Blissful Bites Gallery Bangalore',
     description: 'Gallery of handcrafted baked goods',
     images: ['/Images/logo.jpeg'],
+  },
+  alternates: {
+    canonical: '/gallery',
   },
 }
 
